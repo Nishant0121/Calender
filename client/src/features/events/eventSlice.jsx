@@ -1,7 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/events";
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://calender-8b5p.onrender.com/api/events"
+    : "http://localhost:5000/api/events";
 
 // helper to turn ISO strings into Dates
 const transformEvent = (ev) => ({
