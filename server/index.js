@@ -4,7 +4,14 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // Allow requests from any origin
+    credentials: true, // Allow credentials (cookies, local storage, etc.) to be included in requests
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allow these methods
+    headers: ["Content-Type", "Authorization"], // Allow these headers
+  })
+);
 app.use(express.json());
 
 // Routes
