@@ -1,0 +1,37 @@
+.calendar-container {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rbc-calendar {
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rbc-toolbar {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.rbc-toolbar-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rbc-event {
+  transition: transform 0.1s ease;
+}
+
+.rbc-event:hover {
+  transform: scale(1.02);
+}
+
+.rbc-selected {
+  background: #20c997 !important;
+}
